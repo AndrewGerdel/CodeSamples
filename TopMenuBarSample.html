@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            font-family: monospace;
+        }
+
+        ul {
+            background: lightgreen;
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        li {
+            color: beige;
+            background: lightgreen;
+            display: block;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+
+        li a {
+            color: #fff;
+        }
+
+        li:hover {
+            background: red;
+            cursor: pointer;
+        }
+
+        ul li ul {
+            background: orange;
+            visibility: hidden;
+            opacity: 0;
+            min-width: 5rem;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+        ul li:hover>ul,
+        ul li ul:hover {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        ul li ul li {
+            clear: both;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav role="navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a>
+                <ul class="dropdown">
+                    <li><a href="#">Meet the team</a></li>
+                    <li><a href="#">Chicken is delicious</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a>
+                <ul class="dropdown">
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">I don't know latin</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
